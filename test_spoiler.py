@@ -23,7 +23,6 @@ def test_spoilerize_irc():
     msg1 = 'PRIVMSG #foo :This message has no spoilers.'
     msg2 = 'PRIVMSG #foo :This message has no spoilers.'
     assert spoilerize_irc(..., ..., ..., msg1) == msg2
-    # TODO: use something other than None? 0? empty string? ellipsis? _ (nah)?
 
     msg1 = ('PRIVMSG #lug :The answer to life, the universe, and everything '
             'is <spoiler>42</spoiler>.')
