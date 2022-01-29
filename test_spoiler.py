@@ -24,14 +24,14 @@ def test_spoilerize_irc():
     msg2 = 'PRIVMSG #foo :This message has no spoilers.'
     assert spoilerize_irc(..., ..., ..., msg1) == msg2
 
-    msg1 = ('PRIVMSG #lug :The answer to life, the universe, and everything '
+    msg1 = ('PRIVMSG #foo :The answer to life, the universe, and everything '
             'is <spoiler>42</spoiler>.')
-    msg2 = ('PRIVMSG #lug :The answer to life, the universe, and everything '
+    msg2 = ('PRIVMSG #foo :The answer to life, the universe, and everything '
             'is \x0314,1442\x03.')
     assert spoilerize_irc(..., ..., ..., msg1) == msg2
 
-    msg1 = ('PRIVMSG #lug :<spoiler 3>Darth Vader</spoiler> is <spoiler blue>'
+    msg1 = ('PRIVMSG #foo :<spoiler 3>Darth Vader</spoiler> is <spoiler blue>'
             'Luke</spoiler>\'s father.')
-    msg2 = ('PRIVMSG #lug :\x0303,03Darth Vader\x03 is \x0302,02Luke\x03\'s '
+    msg2 = ('PRIVMSG #foo :\x0303,03Darth Vader\x03 is \x0302,02Luke\x03\'s '
             'father.')
     assert spoilerize_irc(..., ..., ..., msg1) == msg2
