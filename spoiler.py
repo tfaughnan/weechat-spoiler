@@ -70,7 +70,7 @@ def spoilerize_irc(data: str, mod: str, server: str, msg: str):
 
 
 if __name__ == '__main__' and import_ok:
-    weechat.register('spoiler', 'Thomas Faughnan', '0.0.1', 'GPL3',
+    weechat.register('spoiler', 'Thomas Faughnan', '0.1.0', 'GPL3',
                      'Send spoiler text <spoiler>like this</spoiler>', '', '')
     weechat.hook_modifier('input_text_for_buffer', 'spoilerize_buffer', '')
     weechat.hook_modifier('irc_out_privmsg', 'spoilerize_irc', '')
