@@ -59,7 +59,7 @@ def spoilerize_buffer(data: str, mod: str, ptr: str, content: str) -> str:
     return re.sub(SPOILER_PATTERN, repl, content)
 
 
-def spoilerize_irc(data: str, mod: str, server: str, msg: str):
+def spoilerize_irc(data: str, mod: str, server: str, msg: str) -> str:
     m = re.match(MESSAGE_PATTERN, msg)
     if not m:
         return msg
