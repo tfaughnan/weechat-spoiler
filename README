@@ -1,0 +1,13 @@
+                              SPOILER.PY
+
+Send spoiler text (same foreground and background color) like so:
+  The answer to life, the universe, and everything is <spoiler>42</spoiler>.
+An optional color integer in [0, 98] or color name may be provided like so:
+  <spoiler 3>Darth Vader</spoiler> is <spoiler blue>Luke</spoiler>'s father.
+If unspecified, the color defaults to 14 (darkgray in WeeChat).
+
+For documentation on WeeChat color names and U+0003 manual input (Ctrl+c, c):
+https://weechat.org/files/doc/stable/weechat_user.en.html#command_line_colors
+
+For general guidelines on how IRC clients may interpret colors:
+https://modern.ircdocs.horse/formatting.html#colors
